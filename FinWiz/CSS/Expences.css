@@ -1,0 +1,23 @@
+﻿td
+{
+    padding-left:20px;
+}
+
+.form-control{
+    background: none;
+    width: 455px;
+}
+
+.table{
+    width:100%;
+}
+
+input[type=date] {
+    -webkit-appearance: textfield;
+    width: 300px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+

@@ -1,0 +1,83 @@
+﻿body {
+    background-color: cornsilk;
+}
+
+.content {
+    min-height: calc(100vh - 180px);
+}
+
+.footer {
+    background-color:lightgreen;
+    height: 50px;
+    line-height:50px;
+    text-align:center;
+}
+img {
+    border-radius: 5px;
+}
+h1
+{
+    background-color:lightgreen;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-align:center;
+    margin:0;
+    font-size:4em;
+}
+h2{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+article{
+    margin-left:20px;
+    margin-right:20px;
+}
+.table {
+    text-align: left;
+    /*width: 60%;*/
+
+    
+}
+.table td, .table th {
+        /*width: 500px;*/
+        border-top: 0;
+    }
+
+#ContentPlaceHolder1_payroll_tbl th, #ContentPlaceHolder1_exp_tbl th{
+    background-color: #BEEBB0;
+    border-radius: 2px;
+}
+
+
+#img123{
+    text-align:left;
+}
+input[type = text]
+{
+  width:300px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+  background-color:rgba(0, 0, 0, 0);
+}
+input[type = text]:focus {
+  border-color: green;
+}
+
+input[type = password] {
+    width: 300px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+    input[type = password]:focus {
+        border-color: green;
+    }
+.main {
+    margin-left: 20px;
+    margin-right: 20px;
+}

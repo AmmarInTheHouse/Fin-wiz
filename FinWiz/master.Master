@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="FinWiz.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="shortcut icon" href="Logo/FinWiz.ico"/> 
+    <title>FinWiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/MasterCSS.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <header>
+                <h1>FIN WIZ</h1>
+            </header>
+            <section>
+               <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                   <asp:LinkButton ID="LinkButton1"  class="navbar-brand" runat="server">
+                       <img src="../../Logo/FinWiz.png" width="30" height="30" class="d-inline-block align-top">
+                   </asp:LinkButton>
+                   <asp:Button ID="Button1" runat="server" Text="Menu" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
+
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       <ul class="navbar-nav mr-auto">
+                           <%-- Users DropDown --%>
+                           <li class="nav-item dropdown">
+                               <asp:LinkButton class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ID="navbarDropdown" runat="server">Employee</asp:LinkButton>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <asp:LinkButton ID="AddUser" class="dropdown-item" runat="server" OnClick="AddUser_Click">Add Employee</asp:LinkButton>
+                                <asp:LinkButton ID="EditUser" class="dropdown-item" runat="server" OnClick="EditUser_Click">Edit Employee</asp:LinkButton>
+                            </div>
+                          </li>
+                           <%-- Add Expence --%>                           
+                          <li class="nav-item">
+                              <asp:LinkButton ID="AddExpense" class="nav-link" runat="server" OnClick="AddExpense_Click">Add Expense</asp:LinkButton>
+                          </li>
+                           <%-- Verify Expence --%>
+                          <li class="nav-item">
+                            <asp:LinkButton ID="VerifyExpence" class="nav-link" runat="server" OnClick="VerifyExpence_Click">Verify Expense</asp:LinkButton>
+                          </li>
+                           <%-- Expence History --%>
+                          <li class="nav-item">
+                            <asp:LinkButton ID="ExpenceHistory" class="nav-link" runat="server" OnClick="ExpenceHistory_Click">Expense History</asp:LinkButton>
+                          </li>
+                           <%-- Payroll --%>
+                          <li class="nav-item">
+                            <asp:LinkButton ID="Payroll" class="nav-link" runat="server" OnClick="Payroll_Click">Payroll</asp:LinkButton>
+                          </li>
+                           <%-- Generate Payroll --%>
+                          <li class="nav-item">
+                            <asp:LinkButton ID="GeneratePayroll" class="nav-link" runat="server" OnClick="GeneratePatroll_Click">Generate Payroll</asp:LinkButton>
+                          </li>
+                           <%-- Payroll History --%>
+                          <li class="nav-item">
+                            <asp:LinkButton ID="PayrollHistory" class="nav-link" runat="server" OnClick="PayrollHistory_Click">Payroll History</asp:LinkButton>
+                          </li>
+                        </ul>
+                   </div>
+                   <asp:Button ID="Button2" class="btn btn-outline-danger my-2 my-sm-0" runat="server" Text="Logout" OnClick="Button2_Click" />       
+               </nav>
+                <br />
+                <article class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <h1>This is the Default master page</h1>
+                    </asp:ContentPlaceHolder>
+                </article>
+            </section>
+            <br />
+
+            <footer class="footer">
+                <span>&#169; FIN WIZ 2019</span>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
